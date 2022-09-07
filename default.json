@@ -20,5 +20,14 @@
   },
   "npm": {
     "rangeStrategy": "bump"
-  }
+  },
+  "packageRules": [
+    {
+      "groupName": "boto3",
+      "matchPackageNames": [
+        "boto3",
+        "botocore"
+      ]
+    }
+  ]
 }
