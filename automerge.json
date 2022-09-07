@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "pin": {
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        "^@types/"
+      ],
+      "automerge": true,
+      "major": {
+        "automerge": false
+      }
+    }
+  ]
+}

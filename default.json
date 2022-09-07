@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":separateMultipleMajorReleases",
+    ":timezone(Europe/Rome)",
+    "github>AHDCreative/renovate-config:schedule",
+    "github>AHDCreative/renovate-config:automerge",
+    "github>AHDCreative/renovate-config:groupJest",
+    "github>AHDCreative/renovate-config:groupLinters",
+    "github>AHDCreatuve/renovate-config:postUpdate"
+  ],
+  "labels": [
+    "renovate"
+  ],
+  "dockerfile": {
+    "fileMatch": [
+      "(^|/)Dockerfile-[^/]*$"
+    ]
+  },
+  "npm": {
+    "rangeStrategy": "bump"
+  }
+}

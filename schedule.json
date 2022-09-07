@@ -1,0 +1,9 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":timezone(Europe/Rome)"
+  ],
+  "schedule": [
+    "after 9:00 before 18:00 every day except after 13:00 before 14:00"
+  ]
+}
