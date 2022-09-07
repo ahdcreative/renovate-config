@@ -8,6 +8,7 @@
     "github>AHDCreative/renovate-config:automerge",
     "github>AHDCreative/renovate-config:groupJest",
     "github>AHDCreative/renovate-config:groupLinters",
+    "github>AHDCreative/renovate-config:postUpdate"
   ],
   "labels": [
     "renovate"
