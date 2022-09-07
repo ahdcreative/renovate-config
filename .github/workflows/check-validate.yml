@@ -1,0 +1,32 @@
+name: Check & Validate Renovate Config
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+    strategy:
+      matrix:
+        node-version: [18]
+    steps:
+      - uses: actions/checkout@v3
+      - name: use Nodejs ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node
+      - name: Validate Renovate Config
+        run: |
+          for file in *.json
+          do
+            echo "[CI] Inizio Convalida $file"
+            RENOVATE_CONFIG_FILE=${file} npx --package renovate -c 'renovate-config-validator'
+          done
