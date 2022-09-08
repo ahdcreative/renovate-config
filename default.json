@@ -1,33 +1,79 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": ["Default preset for all projects"],
   "extends": [
     "config:base",
-    ":separateMultipleMajorReleases",
-    ":timezone(Europe/Rome)",
-    "github>AHDCreative/renovate-config:schedule",
-    "github>AHDCreative/renovate-config:automerge",
-    "github>AHDCreative/renovate-config:groupJest",
-    "github>AHDCreative/renovate-config:groupLinters",
-    "github>AHDCreative/renovate-config:postUpdate"
+    "default:automergeDigest",
+    "default:semanticCommitsDisabled",
+    "docker:enableMajor",
+    "docker:pinDigests"
   ],
-  "labels": [
-    "renovate"
-  ],
-  "dockerfile": {
-    "fileMatch": [
-      "(^|/)Dockerfile-[^/]*$"
-    ]
-  },
+  "labels": ["renovate"],
   "npm": {
-    "rangeStrategy": "bump"
+    "postUpdateOptions": ["npmDedupe"]
   },
   "packageRules": [
     {
-      "groupName": "boto3",
-      "matchPackageNames": [
-        "boto3",
-        "botocore"
-      ]
+      "allowedVersions": "<1.19 || >1.19",
+      "datasources": ["docker"],
+      "packageNames": ["nginx"]
+    },
+    {
+      "allowedVersions": "<=16",
+      "datasources": ["docker"],
+      "packageNames": ["cimg/node", "circleci/node", "node"]
+    },
+    {
+      "datasources": ["docker"],
+      "packagePatterns": ["cimg/.+", "circleci/.+"],
+      "recreateClosed": true
+    },
+    {
+      "allowedVersions": "<=3.9",
+      "datasources": ["docker"],
+      "packageNames": ["cimg/python", "circleci/python", "python"],
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?<prerelease>(a|b|rc)\\d+)?(-(?<compatibility>.*))?$"
+    },
+    {
+      "datasources": ["docker"],
+      "packagePatterns": ["cimg/.+", "circleci/.+"],
+      "schedule": ["on Monday after 3:00 before 6:00"],
+      "updateTypes": ["digest"]
+    },
+    {
+      "datasources": ["docker"],
+      "labels": ["renovate", "docker-update"],
+      "pin": {
+        "automerge": true
+      }
+    },
+    {
+      "datasources": ["npm"],
+      "labels": ["renovate", "npm-update"]
+    },
+    {
+      "datasources": ["orb"],
+      "labels": ["renovate", "orb-update"]
+    },
+    {
+      "datasources": ["pypi"],
+      "labels": ["renovate", "pypi-update"]
+    },
+    {
+      "datasources": ["terraform-module", "terraform-provider"],
+      "labels": ["renovate", "terraform-update"]
+    },
+    {
+      "labels": ["renovate", "update-major"],
+      "updateTypes": ["major"]
     }
-  ]
+  ],
+  "pip_requirements": {
+    "fileMatch": ["(^|/)requirements(\/*[\\w-]*).(txt|pip)$"]
+  },
+  "timezone": "Europe/Rome",
+  "vulnerabilityAlerts": {
+    "labels": ["renovate", "security"],
+    "reviewers": ["team:@AHDCreative/backend-dev"],
+    "schedule": ["at any time"]
+  }
 }
