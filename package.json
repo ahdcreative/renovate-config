@@ -25,7 +25,7 @@
     "eslint-config-ahd": "1.0.0",
     "prettier-config-ahd": "1.0.1",
     "ajv-cli": "3.3.0",
-    "renovate": "32.194.1"
+    "renovate": "32.194.2"
   },
   "volta": {
     "node": "16.17.0"
