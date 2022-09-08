@@ -16,7 +16,7 @@ jobs:
             - npm-v2-
           name: Restore NPM Cache
       - run:
-          command: nmp install
+          command: npm install
           name: install npm dependencies
       - save_cache:
           key: npm-v2-{{ .Branch }}-{{ checksum "package-lock.json" }}
