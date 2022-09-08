@@ -68,7 +68,7 @@
     }
   ],
   "pip_requirements": {
-    "fileMatch": ["(^|/)requirements(\/*[\\w-]*).(txt|pip)$"]
+    "fileMatch": ["(^|/)requirements(/*[\\w-]*).(txt|pip)$"]
   },
   "timezone": "Europe/Rome",
   "vulnerabilityAlerts": {
