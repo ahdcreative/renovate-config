@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/sh
 # Validate Renovate config presets
 
 # Exit on error. Append "|| true" if you expect an error.
