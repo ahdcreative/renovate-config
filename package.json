@@ -24,7 +24,7 @@
   "devDependencies": {
     "eslint-config-ahd": "1.0.0",
     "prettier-config-ahd": "1.0.1",
-    "ajv-cli": "3.3.0",
+    "ajv-cli": "5.0.0",
     "renovate": "32.194.3"
   },
   "volta": {
