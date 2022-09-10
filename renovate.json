@@ -1,5 +1,5 @@
 {
-  "extends": ["github>AHDCreative/renovate-config"],
+  "extends": ["github>ahdcreative/renovate-config"],
   "packageRules": [
     {
       "automerge": true,
