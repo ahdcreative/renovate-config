@@ -15,7 +15,16 @@
     {
       "allowedVersions": "<1.19 || >1.19",
       "datasources": ["docker"],
-      "packageNames": ["nginx"]
+      "packageNames": ["nginx"],
+      "schedule": [
+        "after 6am",
+        "before 6pm"
+      ],
+      "semanticCommits": [
+        "enabled",
+        "auto"
+      ],
+      "stabilityDays": 7
     },
     {
       "allowedVersions": "<=16",
