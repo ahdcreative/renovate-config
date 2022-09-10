@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/AHDCreative/renovate-config#readme",
   "devDependencies": {
-    "eslint-config-ahd": "1.0.0",
-    "prettier-config-ahd": "1.0.1",
+    "eslint-config-ahd": "1.0.1",
+    "prettier-config-ahd": "1.0.2",
     "ajv-cli": "5.0.0",
     "renovate": "32.194.3"
   },
