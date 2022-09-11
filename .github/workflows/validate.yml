@@ -27,4 +27,4 @@ jobs:
           path: ~/.npm
           key: ${{ runner.os }}-node
       - name: Validate renovate config
-        run:  npx --package renovate -c 'renovate-config-validator'
+        run: npx --package renovate -c 'renovate-config-validator'

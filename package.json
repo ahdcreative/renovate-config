@@ -1,16 +1,9 @@
 {
-  "name": "ahd-renovate-config",
+  "name": "@ahdcreative/renovate-config-ahd",
   "version": "1.0.0",
   "description": "Renovate config presets for AHDCreative / FFXIVITA projects.",
-  "scripts": {
-    "lint": "eslint .",
-    "check": "prettier --check .",
-    "fix": "prettier --write ."
-  },
-  "engines": {
-    "node": ">=10.0.0",
-    "npm": ">=6.11.0"
-  },
+  "private": true,
+  "prettier": "@ahdcreative/prettier-config-ahd",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AHDCreative/renovate-config.git"
@@ -22,17 +15,18 @@
   },
   "homepage": "https://github.com/AHDCreative/renovate-config#readme",
   "devDependencies": {
-    "eslint-config-ahd": "^1.0.1",
-    "prettier-config-ahd": "^1.0.2",
+    "@ahdcreative/eslint-config-ahd": "^1.0.8",
+    "@ahdcreative/stylelint-config-ahd": "^1.0.3",
+    "@ahdcreative/prettier-config-ahd": "^1.0.5",
+    "prettier": "^2.7.1",
+    "prettier-eslint": "15.0.1",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
     "ajv-cli": "5.0.0",
     "renovate": "32.194.4"
   },
-  "volta": {
-    "node": "16.17.0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint-config-ahd"
-    ]
+  "scripts": {
+    "format": "prettier --cache --write '**/*.{js,md,css,scss,yaml,yml,json}'",
+    "lint:format": "prettier --cache --check '**/*.{js,md,css,scss,yaml,yml,json}'"
   }
 }
