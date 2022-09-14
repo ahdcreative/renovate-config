@@ -23,7 +23,7 @@
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.2.1",
     "ajv-cli": "5.0.0",
-    "renovate": "32.195.3"
+    "renovate": "32.195.5"
   },
   "scripts": {
     "format": "prettier --cache --write '**/*.{js,md,css,scss,yaml,yml,json}'",
