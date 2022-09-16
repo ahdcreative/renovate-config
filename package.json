@@ -28,5 +28,8 @@
   "scripts": {
     "format": "prettier --cache --write '**/*.{js,md,css,scss,yaml,yml,json}'",
     "lint:format": "prettier --cache --check '**/*.{js,md,css,scss,yaml,yml,json}'"
+  },
+  "engines": {
+    "node": "16.7"
   }
 }
