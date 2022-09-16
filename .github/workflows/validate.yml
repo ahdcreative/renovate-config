@@ -24,3 +24,5 @@ jobs:
           key: ${{ runner.os }}-node
       - name: Validate renovate config
         run: npx --package renovate -c 'renovate-config-validator'
+      - name: Upload coverage reports to Codecov with GitHub Action
+        uses: codecov/codecov-action@v3
