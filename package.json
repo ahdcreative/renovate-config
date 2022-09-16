@@ -1,5 +1,5 @@
 {
-  "name": "@ahdcreative/renovate-config-ahd",
+  "name": "renovate-config-ahd",
   "version": "1.0.0",
   "description": "Renovate config presets for AHDCreative / FFXIVITA projects.",
   "private": true,
@@ -17,7 +17,7 @@
   "devDependencies": {
     "@ahdcreative/eslint-config-ahd": "1.0.10",
     "@ahdcreative/stylelint-config-ahd": "1.0.3",
-    "@ahdcreative/prettier-config-ahd": "1.0.5",
+    "@ahdcreative/prettier-config-ahd": "1.0.6",
     "prettier": "2.7.1",
     "prettier-eslint": "15.0.1",
     "eslint-config-prettier": "8.5.0",
