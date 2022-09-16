@@ -30,6 +30,6 @@
     "lint:format": "prettier --cache --check '**/*.{js,md,css,scss,yaml,yml,json}'"
   },
   "engines": {
-    "node": "16.7"
+    "node": "16.13"
   }
 }
