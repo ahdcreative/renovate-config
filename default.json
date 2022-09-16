@@ -18,7 +18,7 @@
       "packageNames": ["nginx"],
       "schedule": ["after 6am", "before 6pm"],
       "semanticCommits": ["enabled", "auto"],
-      "stabilityDays": 10
+      "stabilityDays": 10,
        "assignees": [
         "StellaSCR",
         "DarkArtek"
