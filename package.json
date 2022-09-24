@@ -23,7 +23,7 @@
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.2.1",
     "ajv-cli": "5.0.0",
-    "renovate": "32.202.3",
+    "renovate": "32.202.4",
     "coverage":"0.4.1"
   },
   "scripts": {
