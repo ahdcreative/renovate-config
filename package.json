@@ -20,7 +20,7 @@
     "@ahdcreative/prettier-config-ahd": "1.0.6",
     "prettier": "2.7.1",
     "prettier-eslint": "15.0.1",
-    "eslint-config-prettier": "8.5.0",
+    "eslint-config-prettier": "8.10.0",
     "eslint-plugin-prettier": "4.2.1",
     "ajv-cli": "5.0.0",
     "renovate": "35.53.0",
