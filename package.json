@@ -32,6 +32,6 @@
     "coverage": "coverage default.json --reporter"
   },
   "engines": {
-    "node": "16.18"
+    "node": "22.13"
   }
 }
